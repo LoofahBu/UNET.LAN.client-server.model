@@ -10,7 +10,7 @@
 
 ## Quick start
 * **Implement your custom client and server** - NetworkLANClient and NetworkLANServer both are abstract class.
-* **Implement 'OnClientCmdHandler' and 'OnServerAckHandler'**
+* **Implement abstract method 'OnClientCmdHandler' and 'OnServerAckHandler'**
 * **Initalize server and add event callback**
 ```cs
 ConnectionConfig config = NetworkRPCHelper.GetConnectionConfig();
