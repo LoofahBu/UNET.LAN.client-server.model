@@ -11,7 +11,7 @@
 ## Quick start
 * **Implement your custom client and server** - NetworkLANClient and NetworkLANServer both are abstract class.
 * **Implement abstract method 'OnClientCmdHandler' and 'OnServerAckHandler'**
-* **Initalize server and add event callback**
+* **Initialize server and add event callback**
 ```cs
 ConnectionConfig config = NetworkRPCHelper.GetConnectionConfig();
 server = new CustomServer();
@@ -19,7 +19,7 @@ server.SetNetworkSetting(ip, port);
 server.Initialize(this, config);
 ```
 
-* **Initalize client and add event callback**
+* **Initialize client and add event callback**
 ```cs
 ConnectionConfig config = NetworkRPCHelper.GetConnectionConfig();
 client = new CustomClient();
@@ -28,4 +28,4 @@ client.AddEventCallback(MsgType.Disconnect, OnClientDisconnected);
 client.SetNetworkSetting(ip, port);
 client.Initialize(this, config);
 ```
-* **Using SendRPC function to start communication**
+* **Using SendRPC method to start communication**
