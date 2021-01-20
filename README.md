@@ -1,6 +1,6 @@
-# UNET LAN Client-Server Basis
+# UNET LAN Client-Server Simple Abstraction
 
-## Benefits
+## Pros
 
 ### Rapid Development and light-weight
 Using [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkServer.cs) to communicate.
@@ -11,7 +11,7 @@ If you want to send custom command, just override *OnClientCmdHandler* and *OnSe
 ### Client auto-reconnection
 If client doesn't connect to server, will try contiuously.
 
-## Caveats
+## Cons
 
 ### Default max connections
 The default max connections is 100 now.
