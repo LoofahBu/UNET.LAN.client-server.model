@@ -1,4 +1,4 @@
-# UNET LAN Client-Server Simple Abstraction
+# Unity UNET Client-Server Simple Abstraction For LAN
 
 ## Pros
 
@@ -16,7 +16,7 @@ If client doesn't connect to server, will try contiuously.
 ### Default max connections
 The default max connections is 100 now.
 
-## Quick start
+## Quick Start
 1. Implement your custom client and server. [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkServer.cs) both are abstract class.
 2. Implement abstract method *OnClientCmdHandler* and *OnServerAckHandler*.
 3. Initialize server and add event callback
