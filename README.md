@@ -1,20 +1,8 @@
 # Unity UNET Client-Server Simple Abstraction For LAN
 
-## Pros
+## Introduction
 
-### Rapid Development and light-weight
-Using [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkServer.cs) to communicate.
-
-### Ease-of-Use
-If you want to send custom command, just override *OnClientCmdHandler* and *OnServerAckHandler*.
-
-### Client auto-reconnection
-If client doesn't connect to server, will try contiuously.
-
-## Cons
-
-### Default max connections
-The default max connections is 100 now.
+This project is a simple abstraction wrapper for Unity UNET to help developers can rapid develop an application for local network. Just override *OnClientCmdHandler* and *OnServerAckHandler* which on [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkServer.cs). It also provides the auto-reconnection mechanism when client can't connect to server.
 
 ## Quick Start
 1. Implement your custom client and server. [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkServer.cs) both are abstract class.
