@@ -1,16 +1,15 @@
 # Unity UNET Client-Server Wrapper For LAN
 
 ## Introduction
+This project is an abstraction wrapper for Unity UNET that helps developers develop applications for the local network. You can override `OnClientCmdHandler` and `OnServerAckHandler` on [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkLANServer.cs) to customize their behavior.
 
-This project is an abstraction wrapper for Unity UNET to help developers develop an application for the local network. Just override **OnClientCmdHandler** and **OnServerAckHandler** which on [NetworkClient](Assets/NetworkLANClient.cs) and [NetworkServer](Assets/NetworkServer.cs).
-
-It also provides the auto-reconnection mechanism when a client can't connect to a server.
+It also provides an auto-reconnection mechanism when a client can't connect to a server.
 
 ## Quick Start
-1. Create your client class that inherits [NetworkClient](Assets/NetworkLANClient.cs)
-2. Create your server class that inherits [NetworkServer](Assets/NetworkServer.cs).
-3. Implement abstract method **OnClientCmdHandler** and **OnServerAckHandler**.
-4. Initialize server and add event callback
+1. Create your client class that inherits from [NetworkClient](Assets/NetworkLANClient.cs)
+2. Create your server class that inherits from [NetworkServer](Assets/NetworkLANServer.cs)
+3. Implement the abstract methods `OnClientCmdHandler` and `OnServerAckHandler`
+4. Initialize the server and add an event callback:
 ```cs
 ConnectionConfig config = NetworkRPCHelper.GetConnectionConfig();
 server = new CustomServer();
@@ -18,7 +17,7 @@ server.SetNetworkSetting(ip, port);
 server.Initialize(this, config);
 ```
 
-5. Initialize client and add event callback
+5. Initialize the client and add event callbacks:
 ```cs
 ConnectionConfig config = NetworkRPCHelper.GetConnectionConfig();
 client = new CustomClient();
@@ -28,4 +27,4 @@ client.SetNetworkSetting(ip, port);
 client.Initialize(this, config);
 ```
 
-6. Using SendRPC method to start communication
+6. Use the SendRPC method to start communication
